@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on: 1-Nov-2018
+// Created by: Natalie Beshara
+// Created for: ICS3U
+// This program calculates your average grade
+
+show("Please enter your grades one at a time and we will calculate your grade average. Please enter -1 when you have entered all your grades and want your total average.")
+
+var numberEntered = Double(askForNumber("Enter your grade"))
+var howManyNumbers = 0.00
+var totalNumber = 0.00
+
+while numberEntered != -1 {
+    if numberEntered &gt;= 100 {
+        show("Please enter a number less than 100.")
+    }
+    else if numberEntered &lt;= 0 {
+        show ("Please enter a number greater than 0.")
+    }
+    else {
+    totalNumber = totalNumber + numberEntered
+    howManyNumbers = howManyNumbers + 1 }
+    numberEntered = Double(askForNumber("Enter your grade"))
+}
+
+let averageTotal = totalNumber / howManyNumbers
+
+show(String(format: "Your total average is %.02f", averageTotal))
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 899}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 71}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
